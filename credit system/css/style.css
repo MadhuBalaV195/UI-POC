@@ -1,0 +1,8 @@
+.main-height .login-wrap {margin:auto; float:none;}
+.borderRad10{border-radius: 10px;border:1px solid grey;}
+input[type='text'], input[type='password'] {outline-color: white;}
+.main-height{margin: 200px 0;}
+.tab-bg{background:#fff}
+textarea{vertical-align: text-top;}
+.submitbtn{color: white;background: rgba(36, 146, 36, 0.85);border: 1px solid rgb(13, 167, 13);border-radius: 5px;padding: 10px 20px;}
+
