@@ -1,5 +1,55 @@
-<div class="container">
-    <div class="row">
-        <h1>check component content</h1>
+<h1>check</h1>
+<div class="container main-height tab-bg">
+  
+
+  <ul class="nav nav-tabs">
+   
+    <li class="active"><a data-toggle="tab" href="#poc">POC</a></li>
+    <li><a data-toggle="tab" href="#TrainingsAttended">Training's Attended</a></li>
+    <li><a data-toggle="tab" href="#TrainingsTaken">Trainings Taken</a></li>
+  </ul>
+
+  <div class="tab-content padding10 pull-left">
+   <div id="poc" class="tab-pane fade in active col-sm-12">
+       <div class="row">
+            <!--<img src="images/proofofconcept.jpg" class="col-sm-4" alt="poc-image">-->
+           <div class="col-sm-8 form-group">
+        <label class="col-sm-6">TITLE</label>
+       <input type="text" class="col-sm-6 padding10 borderRad10">
+       </div>
+       <div class="col-sm-8 form-group">
+        <label class="col-sm-6">DESCRIPTION</label>
+       <textarea rows="5" cols="50" class="col-sm-6"></textarea>
+       </div>
+           <button class="pull-right submitbtn">Submit</button>
+       </div>
+       
     </div>
+    <div id="TrainingsAttended" class="tab-pane fade">
+      <div class="row">
+          <!--<img src="images/training.jpg" class="col-sm-4">-->
+        <div class="col-sm-8 form-group">
+        <label class="col-sm-6">TITLE</label>
+       <input type="text" class="col-sm-6 padding10 borderRad10">
+       </div>
+       <div class="col-sm-8 form-group">
+        <label class="col-sm-6">DESCRIPTION</label>
+       <textarea rows="5" cols="50" class="col-sm-6"></textarea>
+       </div>  
+      </div>
+         <button class="pull-right submitbtn">Submit</button>
+    </div>
+    <div id="TrainingsTaken" class="tab-pane fade">
+                  <!--<img src="images/trainingt.jpg" class="col-sm-4">-->
+     <div class="col-sm-8 form-group">
+        <label class="col-sm-6">TITLE</label>
+       <input type="text" class="col-sm-6 padding10 borderRad10">
+       </div>
+       <div class="col-sm-8 form-group">
+        <label class="col-sm-6">DESCRIPTION</label>
+       <textarea rows="5" cols="50" class="col-sm-6"></textarea>
+       </div>
+         <button class="pull-right submitbtn">Submit</button>
+    </div>
+  </div>
 </div>

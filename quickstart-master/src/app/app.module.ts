@@ -8,8 +8,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: 'sample.component', component: SampleComponent },
+  { path: 'check.component', component: CheckComponent },
   { path: 'test.component',      component: TestComponent },
-  { path: '**', component: CheckComponent }
+  { path: '**', component: TestComponent }
 ];
 
 @NgModule({
