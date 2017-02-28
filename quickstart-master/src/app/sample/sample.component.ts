@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
 })
 
 export class SampleComponent {
-    title: string = "Sample App";
+     msg = "";
+    nCnt: number = 0;
+     clickMe() {
+      this.nCnt = this.nCnt + 1;
+      this.msg = "Clicked: " + this.nCnt;
+  }
 }

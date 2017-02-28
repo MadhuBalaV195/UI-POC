@@ -35,3 +35,14 @@
 		</div>
 	</div>
 </div>
+
+<button (click)="clickMe()">Click</button>
+<p><strong>{{msg}}</strong></p>
+
+ 
+  <h1>Angular Router</h1>
+  <nav>
+    <a routerLink="/check.component" routerLinkActive="active">check</a>
+    <a routerLink="/test.component" routerLinkActive="active">Test</a>
+  </nav>
+  <router-outlet></router-outlet>
