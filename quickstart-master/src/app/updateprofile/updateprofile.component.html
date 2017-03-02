@@ -1,4 +1,4 @@
-<h1>check</h1>
+<!--<h1>check</h1>
 <div class="container main-height tab-bg">
   
 
@@ -12,7 +12,7 @@
   <div class="tab-content padding10 pull-left">
    <div id="poc" class="tab-pane fade in active col-sm-12">
        <div class="row">
-            <!--<img src="images/proofofconcept.jpg" class="col-sm-4" alt="poc-image">-->
+            <img src="images/proofofconcept.jpg" class="col-sm-4" alt="poc-image">
            <div class="col-sm-8 form-group">
         <label class="col-sm-6">TITLE</label>
        <input type="text" class="col-sm-6 padding10 borderRad10">
@@ -27,7 +27,7 @@
     </div>
     <div id="TrainingsAttended" class="tab-pane fade">
       <div class="row">
-          <!--<img src="images/training.jpg" class="col-sm-4">-->
+          <img src="images/training.jpg" class="col-sm-4">
         <div class="col-sm-8 form-group">
         <label class="col-sm-6">TITLE</label>
        <input type="text" class="col-sm-6 padding10 borderRad10">
@@ -40,7 +40,7 @@
          <button class="pull-right submitbtn">Submit</button>
     </div>
     <div id="TrainingsTaken" class="tab-pane fade">
-                  <!--<img src="images/trainingt.jpg" class="col-sm-4">-->
+                  <img src="images/trainingt.jpg" class="col-sm-4">
      <div class="col-sm-8 form-group">
         <label class="col-sm-6">TITLE</label>
        <input type="text" class="col-sm-6 padding10 borderRad10">
@@ -52,4 +52,17 @@
          <button class="pull-right submitbtn">Submit</button>
     </div>
   </div>
-</div>
+</div>-->
+
+
+<an-tablist #list="anTabList" anListClass="diff-class"></an-tablist>
+<an-tabs [anList]="list">
+    <div *anTabDefault="tabOne">
+        The Contents of Tab one
+        <div anNextTab="hello">Next</div>
+    </div>
+    <div *anTab="'hello'">
+        The Contents of Tab Two
+        <div [anNextTab]="tabOne"></div>
+    </div>
+</an-tabs>
