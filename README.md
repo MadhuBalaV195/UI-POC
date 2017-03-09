@@ -30,9 +30,12 @@
 
     export class AppModule { }
 
-12. Open angular-cli.json and insert a new entry into the styles array :
+12. Open angular-cli.json and insert a new entry into the styles and scripts array :
     "styles": [
       "styles.css",
        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
     ],
+    "scripts": ["../node_modules/jquery/dist/jquery.min.js",
+                  "../node_modules/tether/dist/js/tether.js",
+                  "../node_modules/bootstrap/dist/js/bootstrap.min.js"],
 13. Now you can run the project using "ng serve" or "npm start".
