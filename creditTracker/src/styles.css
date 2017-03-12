@@ -1,9 +1,100 @@
-.main-height .login-wrap {margin:auto; float:none;}
-.borderRad10{border-radius: 10px;border:1px solid grey;}
-input[type='text'], input[type='password'] {outline-color: white;}
-.main-height{margin: 200px 0;}
-.tab-bg{background:#fff}
-textarea{vertical-align: text-top;}
-.submitbtn{color: white;background: rgba(36, 146, 36, 0.85);border: 1px solid rgb(13, 167, 13);border-radius: 5px;padding: 10px 20px;cursor:pointer;}
+html,body{
+    height: 100%;width: 100%;
+}
+@font-face {font-family: 'Roboto-Regular';src: url(./includes/fonts/Roboto-Regular.ttf);}
+@font-face {font-family: 'Roboto-Bold';src: url(./includes/fonts/Roboto-Bold.ttf);}
+@font-face {font-family: 'Roboto-Italic';src: url(./includes/fonts/Roboto-Italic.ttf);}
+body{
+    font-family: 'Roboto-Regular','sans-serif';
+    background: url(./includes/images/background.jpg);
+}
+/* common elements*/
+.pad0{
+    padding: 0 !important;
+}
+/* header */
+.navbar-toggler{
+    border-color: transparent !important;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.navbar-toggler:focus{
+    outline: 0;
+}
+.logout:hover{
+    background: #ff3366;
+}
 
+/* login page */
+.loginWrapper .form-wrapper{
+    padding: 25px;
+    background: #444;
+    text-align: left;
+}
+.loginWrapper .form-box{
+    float: none;
+    margin: auto;
+    margin-top: 100px;
+}
+.loginWrapper .form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+.loginWrapper .form-group .fa{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    font-size: 20px;
+    color: #888;
+}
+.loginWrapper input[type="text"],.loginWrapper  input[type="password"],.login-btn{
+    height: 50px;
+    margin: 0;
+    padding: 0 20px; 
+    text-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+.loginWrapper input[type="text"],.loginWrapper input[type="password"]{
+    background: #fff;
+    color: #888;
+    border: 3px solid #fff;
+}
+.loginWrapper input[type="text"]:focus, .loginWrapper input[type="password"]:focus{
+    border: 0;
+    color: #888;
+}
+.loginWrapper .login-btn{
+    background: #ff3366;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+.loginWrapper .login-btn:hover,.loginWrapper .login-btn:focus{
+    opacity: 0.8;
+    box-shadow: none;
+}
+
+/* control panel */
+.controlPanelWrapper ul{
+    padding: 0;
+}
+.controlPanelWrapper ul li{
+    padding: 15px;
+}
+.controlPanelWrapper ul li.active, .controlPanelWrapper ul li:hover,.controlPanelWrapper ul li:hover a,.controlPanelWrapper ul li.active a{
+    background: #030303;
+    color: #fff;
+}
+.controlPanelWrapper ul li a{
+    color: #9d9d9d;
+    text-decoration: none;
+    display: block;
+}
 

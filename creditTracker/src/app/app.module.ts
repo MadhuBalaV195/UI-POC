@@ -9,13 +9,25 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
+import { TabComponent } from './tab.component';
+import { TabsComponent } from './tabs.component';
+import { ControlPanelComponent } from './control-panel/control-panel.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { SearchProfileComponent } from './search-profile/search-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    TabComponent,
+    TabsComponent,
+    ControlPanelComponent,
+    ViewProfileComponent,
+    UpdateProfileComponent,
+    SearchProfileComponent
   ],
   imports: [
     BrowserModule,
