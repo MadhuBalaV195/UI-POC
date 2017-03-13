@@ -5,12 +5,16 @@ html,body{
 @font-face {font-family: 'Roboto-Bold';src: url(./includes/fonts/Roboto-Bold.ttf);}
 @font-face {font-family: 'Roboto-Italic';src: url(./includes/fonts/Roboto-Italic.ttf);}
 body{
-    font-family: 'Roboto-Regular','sans-serif';
-    background: url(./includes/images/background.jpg);
+    font-family: 'Roboto-Regular','sans-serif';   
+    padding-top: 56px;
 }
 /* common elements*/
 .pad0{
     padding: 0 !important;
+}
+.full-height-wrapper{
+    height: 100%;
+    position: relative;
 }
 /* header */
 .navbar-toggler{
@@ -26,6 +30,17 @@ body{
 }
 
 /* login page */
+.loginWrapper{
+     background: url(./includes/images/background.jpg);
+}
+.loginWrapper .centering-block{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+}
 .loginWrapper .form-wrapper{
     padding: 25px;
     background: #444;
@@ -34,7 +49,6 @@ body{
 .loginWrapper .form-box{
     float: none;
     margin: auto;
-    margin-top: 100px;
 }
 .loginWrapper .form-group {
     margin-bottom: 15px;
@@ -84,9 +98,11 @@ body{
 /* control panel */
 .controlPanelWrapper ul{
     padding: 0;
+    margin-bottom: 0;
 }
 .controlPanelWrapper ul li{
     padding: 15px;
+    cursor: pointer;
 }
 .controlPanelWrapper ul li.active, .controlPanelWrapper ul li:hover,.controlPanelWrapper ul li:hover a,.controlPanelWrapper ul li.active a{
     background: #030303;
@@ -97,4 +113,13 @@ body{
     text-decoration: none;
     display: block;
 }
-
+ /*update profile*/
+ .update-profile{
+     padding: 15px;
+ }
+ .update-profile ul{
+     border: 0;
+ }
+ tab .pane{
+     border: 1px solid #d9d9d9;
+ }

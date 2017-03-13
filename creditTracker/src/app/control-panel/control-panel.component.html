@@ -1,16 +1,14 @@
-<section class="controlPanelWrapper">
-  <div class="container-fluid">
+<section class="controlPanelWrapper container-fluid full-height-wrapper">
     <div class="row">
       <div class="col-sm-3 col-md-3 side-nav pad0" role="navigation">
         <ul class="navbar bg-inverse side-nav">
-          <li [routerLinkActive]="['active']"><a [routerLink]="['view-profile']" class="sidelinks">View Profile</a></li>
-          <li [routerLinkActive]="['active']"><a [routerLink]="['update-profile']" class="sidelinks">Update Profile</a></li>
-          <li [routerLinkActive]="['active']"><a [routerLink]="['search-profile']" class="sidelinks">View All Profile</a></li>
+          <li routerLinkActive="active"><a [routerLink]="['view-profile']" class="sidelinks">View Profile</a></li>
+          <li routerLinkActive="active"><a [routerLink]="['update-profile']" class="sidelinks">Update Profile</a></li>
+          <li routerLinkActive="active"><a [routerLink]="['search-profile']" class="sidelinks">View All Profile</a></li>
         </ul>
       </div>
       <div class="col-sm-9 col-md-9 main pad0">
         <router-outlet></router-outlet>
       </div>
     </div>
-  </div>
 </section>
