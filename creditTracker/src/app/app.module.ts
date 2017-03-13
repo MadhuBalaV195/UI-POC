@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
@@ -19,7 +18,6 @@ import { SearchProfileComponent } from './search-profile/search-profile.componen
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     LoginComponent,
     TabComponent,

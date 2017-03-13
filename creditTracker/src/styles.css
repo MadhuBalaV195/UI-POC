@@ -16,7 +16,18 @@ body{
     height: 100%;
     position: relative;
 }
-
+/*header common properties*/
+.navbar-toggler{
+    border-color: transparent !important;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.navbar-toggler:focus{
+    outline: 0;
+}
+.navbar-inverse .navbar-nav .nav-link{
+    color: #9d9d9d;
+}
 /* update profile css for tabs */
 .update-profile ul{
     border: 0;

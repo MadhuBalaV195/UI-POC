@@ -1,6 +1,8 @@
 /* login page */
 .loginWrapper{
      background: url(./includes/images/background.jpg);
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
 }
 .loginWrapper .centering-block{
     position: absolute;
@@ -32,12 +34,12 @@
 .loginWrapper .form-group .fa{
     position: absolute;
     right: 10px;
-    top: 15px;
+    top: 10px;
     font-size: 20px;
     color: #888;
 }
 .loginWrapper input[type="text"],.loginWrapper  input[type="password"],.login-btn{
-    height: 50px;
+    height: 40px;
     margin: 0;
     padding: 0 20px; 
     text-shadow: none;
@@ -60,12 +62,12 @@
     color: #888;
 }
 .loginWrapper .login-btn{
-    background: #1b89b4;
+    background: #1570C1;
     border: 0;
     color: #fff;
     cursor: pointer;
 }
 .loginWrapper .login-btn:hover,.loginWrapper .login-btn:focus{
-    opacity: 0.8;
+    background: #145c9c;
     box-shadow: none;
 }
