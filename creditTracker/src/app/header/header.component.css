@@ -1,0 +1,12 @@
+/* header */
+.navbar-toggler{
+    border-color: transparent !important;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.navbar-toggler:focus{
+    outline: 0;
+}
+.logout:hover{
+    background: #1b89b4;
+}
