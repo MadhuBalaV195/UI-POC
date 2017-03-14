@@ -3,6 +3,7 @@
      background: url(./includes/images/background.jpg);
      background-size: 100% 100%;
      background-repeat: no-repeat;
+     height:100%;
 }
 .loginWrapper .centering-block{
     position: absolute;
