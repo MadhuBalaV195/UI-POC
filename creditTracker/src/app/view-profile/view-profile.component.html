@@ -23,7 +23,7 @@
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" id="poc-score" [(ngModel)]="myModel1">
+         <input type="number" class="form-control" id="poc-score" [(ngModel)]="myModel1">
        </div>
        <div class="col-sm-1">
          
@@ -77,8 +77,8 @@
     <div class="form-group row">
       <label class="form-label col-sm-2">Total Score</label>
       <div class="col-sm-3">
-        <input type="number" class="form-control" id="total-score" >{{myModel1+myModel2+myModel3+myModel4}}
-        {{5+9}}
+        <!--<input type="number" class="form-control" id="total-score" >-->
+        <label>{{myModel1+myModel2+myModel3+myModel4}}</label>
        </div>
     </div>
   </div>
