@@ -23,9 +23,11 @@
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" id="poc-score">
+         <input type="text" class="form-control" id="poc-score" [(ngModel)]="myModel1">
        </div>
-       <div class="col-sm-1"></div>
+       <div class="col-sm-1">
+         
+       </div>
        <div class="col-sm-1">
          <button class="btn btn-success" (click)="pocTaken.open()">Edit<i class="fa fa-pencil-square-o"></i></button>
        </div>
@@ -37,7 +39,7 @@
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" id="trainingTaken-score">
+         <input type="number" class="form-control" id="trainingTaken-score" [(ngModel)]="myModel2">
        </div>
         <div class="col-sm-1"></div>
        <div class="col-sm-1">
@@ -51,7 +53,7 @@
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" id="trainingAttended-score">
+         <input type="number" class="form-control" id="trainingAttended-score" [(ngModel)]="myModel3">
        </div>
         <div class="col-sm-1"></div>
        <div class="col-sm-1">
@@ -65,7 +67,7 @@
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" id="awards-score">
+         <input type="number" class="form-control" id="awards-score" [(ngModel)]="myModel4">
        </div>
         <div class="col-sm-1"></div>
        <div class="col-sm-1">
@@ -75,7 +77,8 @@
     <div class="form-group row">
       <label class="form-label col-sm-2">Total Score</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" id="total-score">
+        <input type="number" class="form-control" id="total-score" >{{myModel1+myModel2+myModel3+myModel4}}
+        {{5+9}}
        </div>
     </div>
   </div>
