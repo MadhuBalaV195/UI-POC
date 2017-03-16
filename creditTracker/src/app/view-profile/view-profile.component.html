@@ -19,7 +19,7 @@
     <div class="form-group row">
       <label class="form-label col-sm-2">POC's Taken</label>
       <div class="col-sm-3">
-         <textarea class="form-control" rows="5" id="pocTaken" readonly></textarea>
+         <textarea class="form-control pocTaken" rows="5" id="pocTaken" readonly>{{clickMessage}}</textarea>
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
@@ -29,7 +29,8 @@
          
        </div>
        <div class="col-sm-1">
-         <button class="btn btn-success" (click)="pocTaken.open()">Edit<i class="fa fa-pencil-square-o"></i></button>
+         <button class="btn btn-success" (click)="pocTakenOpen()">Edit<i class="fa fa-pencil-square-o"></i></button>
+       
        </div>
     </div>
     <div class="form-group row">
