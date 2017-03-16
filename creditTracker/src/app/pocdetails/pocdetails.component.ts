@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pocdetails.component.css']
 })
 export class PocdetailsComponent implements OnInit {
-
+pocdescription: string;
   constructor() { }
 
   ngOnInit() {

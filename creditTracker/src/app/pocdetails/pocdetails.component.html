@@ -1,3 +1,24 @@
-<p>
-  pocdetails works!
-</p>
+<section class="pocdetails full-height-wrapper">
+  <div class="content-layout">
+    <div class="form-group row">
+      <label class="form-label col-sm-2">Title</label>
+      <div class="col-sm-3">
+         <input type="text" class="form-control" [(ngModel)]="pocdescription">
+       </div>
+    </div>
+    <div class="form-group row">
+      <label class="form-label col-sm-2">Description</label>
+      <div class="col-sm-3">
+         <textarea class="form-control" type="text" rows="5" id=""  ></textarea>
+       {{pocdescription}}
+       </div>
+    </div>
+    <div class="form-group row">
+      <label class="form-label col-sm-2">Technology Used</label>
+      <div class="col-sm-3">
+         <input type="text" class="form-control">
+       </div>
+    </div>
+    <button class="btn btn-success" (click)="appendPocDetails()">Submit</button>
+  </div>
+</section>
