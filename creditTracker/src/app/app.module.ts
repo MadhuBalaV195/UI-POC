@@ -14,6 +14,9 @@ import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { SearchProfileComponent } from './search-profile/search-profile.component';
+import { MyGridApplicationComponent } from './data-grid/data-grid.component';
+import { GridCellComponent } from './grid-cell-component/grid-cell-component.component';
+import {AgGridModule} from "ag-grid-angular/main";
 
 @NgModule({
   declarations: [
@@ -25,14 +28,18 @@ import { SearchProfileComponent } from './search-profile/search-profile.componen
     ControlPanelComponent,
     ViewProfileComponent,
     UpdateProfileComponent,
-    SearchProfileComponent
+    SearchProfileComponent,
+    MyGridApplicationComponent,
+    GridCellComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
-    routing
+    routing,
+    AgGridModule.withComponents(
+            [GridCellComponent])
   ],
   providers: [],
   bootstrap: [AppComponent]
