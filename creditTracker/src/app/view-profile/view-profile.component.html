@@ -19,15 +19,18 @@
     <div class="form-group row">
       <label class="form-label col-sm-2">POC's Taken</label>
       <div class="col-sm-3">
-         <textarea class="form-control" rows="5" id="pocTaken" readonly></textarea>
+         <textarea class="form-control pocTaken" rows="5" id="pocTaken" readonly>{{clickMessage}}</textarea>
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" readonly>
+         <input type="number" class="form-control" id="poc-score" [(ngModel)]="myModel1">
        </div>
-       <div class="col-sm-1"></div>
        <div class="col-sm-1">
-         <button class="btn btn-success" (click)="pocTaken.open()">Edit<i class="fa fa-pencil-square-o"></i></button>
+         
+       </div>
+       <div class="col-sm-1">
+         <button class="btn btn-success" (click)="pocTakenOpen()">Edit<i class="fa fa-pencil-square-o"></i></button>
+       
        </div>
     </div>
     <div class="form-group row">
@@ -37,7 +40,7 @@
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" readonly>
+         <input type="number" class="form-control" id="trainingTaken-score" [(ngModel)]="myModel2">
        </div>
         <div class="col-sm-1"></div>
        <div class="col-sm-1">
@@ -51,7 +54,7 @@
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" readonly>
+         <input type="number" class="form-control" id="trainingAttended-score" [(ngModel)]="myModel3">
        </div>
         <div class="col-sm-1"></div>
        <div class="col-sm-1">
@@ -65,7 +68,7 @@
        </div>
        <div class="col-sm-2"></div>
        <div class="col-sm-1">
-         <input type="text" class="form-control" readonly>
+         <input type="number" class="form-control" id="awards-score" [(ngModel)]="myModel4">
        </div>
         <div class="col-sm-1"></div>
        <div class="col-sm-1">
@@ -75,7 +78,8 @@
     <div class="form-group row">
       <label class="form-label col-sm-2">Total Score</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" readonly>
+        <!--<input type="number" class="form-control" id="total-score" >-->
+        <label>{{myModel1+myModel2+myModel3+myModel4}}</label>
        </div>
     </div>
   </div>
