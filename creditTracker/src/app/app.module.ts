@@ -17,6 +17,10 @@ import { SearchProfileComponent } from './search-profile/search-profile.componen
 import { MyGridApplicationComponent } from './data-grid/data-grid.component';
 import { GridCellComponent } from './grid-cell-component/grid-cell-component.component';
 import {AgGridModule} from "ag-grid-angular/main";
+import { PocdetailsComponent } from './pocdetails/pocdetails.component';
+import { TrainingsAttendedComponent } from './trainings-attended/trainings-attended.component';
+import { TrainingsTakenComponent } from './trainings-taken/trainings-taken.component';
+import { AwardsAchievementsComponent } from './awards-achievements/awards-achievements.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import {AgGridModule} from "ag-grid-angular/main";
     UpdateProfileComponent,
     SearchProfileComponent,
     MyGridApplicationComponent,
-    GridCellComponent
+    GridCellComponent,
+    PocdetailsComponent,
+    TrainingsAttendedComponent,
+    TrainingsTakenComponent,
+    AwardsAchievementsComponent
   ],
   imports: [
     BrowserModule,
