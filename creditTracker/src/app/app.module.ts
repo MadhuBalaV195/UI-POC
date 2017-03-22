@@ -2,10 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { TabComponent } from './tab.component';
@@ -25,7 +23,6 @@ import { AwardsAchievementsComponent } from './awards-achievements/awards-achiev
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
     LoginComponent,
     TabComponent,
     TabsComponent,
@@ -44,7 +41,6 @@ import { AwardsAchievementsComponent } from './awards-achievements/awards-achiev
     BrowserModule,
     FormsModule,
     HttpModule,
-    NgbModule.forRoot(),
     routing,
     AgGridModule.withComponents(
             [GridCellComponent])

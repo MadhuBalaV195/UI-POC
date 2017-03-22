@@ -17,15 +17,13 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
-      "styles": [        
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-           "styles.css",
+      "styles": [       
+        "../src/includes/libraries/bootstrap/css/bootstrap.min.css",
+        "styles.css",
         "../node_modules/ag-grid/dist/styles/ag-grid.css",
         "../node_modules/ag-grid/dist/styles/theme-fresh.css"
       ],
-      "scripts": ["../node_modules/jquery/dist/jquery.min.js",
-                  "../node_modules/tether/dist/js/tether.js",
-                  "../node_modules/bootstrap/dist/js/bootstrap.min.js"],
+      "scripts": ["../src/includes/libraries/jquery-3.1.1.min.js","../src/includes/libraries/bootstrap/js/bootstrap.min.js"],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

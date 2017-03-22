@@ -1,10 +1,4 @@
 /* login page */
-.loginWrapper{
-     background: url(./includes/images/background.jpg);
-     background-size: 100% 100%;
-     background-repeat: no-repeat;
-     height:100%;
-}
 .loginWrapper .centering-block{
     position: absolute;
     top: 50%;
@@ -16,10 +10,9 @@
 .loginWrapper .form-wrapper{
     padding: 25px;
     background: #444;
-    text-align: left;
 }
 .loginWrapper .form-wrapper img{
-    height: 100px;width: 100px;
+    height: 100px;width: 100px;border-radius: 50%;
 }
 .loginWrapper .form-wrapper .login-form{
     margin-top: 15px;

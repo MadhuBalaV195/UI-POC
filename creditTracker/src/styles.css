@@ -1,12 +1,17 @@
 html,body{
-    height: 100%;width: 100%;
+    min-height: 100%;
+    height: 100%;
+    min-width: 320px;
 }
 @font-face {font-family: 'Roboto-Regular';src: url(./includes/fonts/Roboto-Regular.ttf);}
 @font-face {font-family: 'Roboto-Bold';src: url(./includes/fonts/Roboto-Bold.ttf);}
 @font-face {font-family: 'Roboto-Italic';src: url(./includes/fonts/Roboto-Italic.ttf);}
 body{
     font-family: 'Roboto-Regular','sans-serif';   
-    padding-top: 56px;
+    padding-top: 50px;
+}
+ul{
+    list-style-type: none;
 }
 /* common elements*/
 .pad0{
@@ -14,38 +19,37 @@ body{
 }
 .full-height-wrapper{
     /*height: 100%;*/
-    position: relative;
 }
 /*header common properties*/
-.navbar-toggler{
-    border-color: transparent !important;
-    margin-top: 5px;
-    cursor: pointer;
-}
-.navbar-toggler:focus{
-    outline: 0;
-}
 .navbar-inverse .navbar-nav .nav-link{
     color: #9d9d9d;
+}
+.navbar-right li{
+    color: #9d9d9d;
+}
+.navbar-right li span{
+    display: inline-block;
+    padding: 15px;
 }
 /* update profile css for tabs */
 .update-profile ul{
     border: 0;
 }
 .update-profile ul.nav-tabs li{
-    padding: 15px;
-    cursor: pointer;
     border-radius: 4px 4px 0 0;
     margin-right: 5px;
+    cursor: pointer;
 }
 .update-profile ul.nav-tabs li.active, .update-profile ul.nav-tabs li:hover,.update-profile ul.nav-tabs li:hover a,.update-profile ul.nav-tabs li.active a{
-    background: #030303;
+    background: #080808;
     color: #fff;
+    border: 0;
 }
 .update-profile ul.nav-tabs li a{
     color: #686868;
     text-decoration: none;
-    display: block;
+    display: block;  
+    padding: 10px;  
 }
 tab .pane{
     border: 1px solid #d9d9d9;
