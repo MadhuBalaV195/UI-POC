@@ -16,10 +16,10 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <span>Welcome </span>
+            <span class="username">Welcome! {{username}}</span>
           </li>
           <li>
-            <a class="logout" [routerLink]="['']">Logout <i class="fa fa-sign-out" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+            <a class="logout" (click)="logout()">Logout <i class="fa fa-sign-out" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>

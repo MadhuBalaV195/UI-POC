@@ -2,8 +2,14 @@
     height:100%;
 }
 /* control panel */
+.navbar-inverse .navbar-nav .logout{
+    cursor: pointer;
+}
 .navbar-inverse .navbar-nav .logout:hover{
     background: #1b89b4;
+    color: #fff;
+}
+.navbar-inverse .navbar-nav .username{
     color: #fff;
 }
 .controlPanelWrapper .side-nav{

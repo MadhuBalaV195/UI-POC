@@ -19,6 +19,7 @@ import { PocdetailsComponent } from './pocdetails/pocdetails.component';
 import { TrainingsAttendedComponent } from './trainings-attended/trainings-attended.component';
 import { TrainingsTakenComponent } from './trainings-taken/trainings-taken.component';
 import { AwardsAchievementsComponent } from './awards-achievements/awards-achievements.component';
+import {AuthenticationService} from './authentication.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { AwardsAchievementsComponent } from './awards-achievements/awards-achiev
     AgGridModule.withComponents(
             [GridCellComponent])
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

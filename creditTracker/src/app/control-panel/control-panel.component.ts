@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthenticationService} from '../authentication.service'
 
 @Component({
   selector: 'app-control-panel',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlPanelComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service:AuthenticationService) { }
+  private username: string;
   ngOnInit() {
+    this.username=localStorage.getItem('user');
+  }
+  logout(){
+    this.service.logout();
   }
 
 }
