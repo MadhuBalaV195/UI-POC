@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ControlPanelComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
   private username: string;
   ngOnInit() {
     this.username = localStorage.getItem('user');
