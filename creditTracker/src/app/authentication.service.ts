@@ -16,11 +16,7 @@ var users=[
 export class AuthenticationService {
 
   constructor(private router:Router) { }
-  logout() {
-    localStorage.removeItem("user");
-    this.router.navigate(['']);
-  }
- 
+  
   login(user){
     var authenticatedUser = users.find(u => u.username === user.username);
     if (authenticatedUser && authenticatedUser.password === user.password){

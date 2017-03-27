@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from '../authentication.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-control-panel',
@@ -8,13 +8,14 @@ import {AuthenticationService} from '../authentication.service'
 })
 export class ControlPanelComponent implements OnInit {
 
-  constructor(private service:AuthenticationService) { }
+  constructor(private router:Router) { }
   private username: string;
   ngOnInit() {
-    this.username=localStorage.getItem('user');
+    this.username = localStorage.getItem('user');
   }
-  logout(){
-    this.service.logout();
+  logout() {
+    localStorage.removeItem("user");
+    this.router.navigate(['']);
   }
 
 }
