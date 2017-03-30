@@ -54,5 +54,30 @@ ul{
 tab .pane{
     border: 1px solid #d9d9d9;
 }
-
 .content-layout{padding:20px; border:1px solid #d9d9d9;border-radius: 5px;margin: 20px;background: rgba(253, 245, 230, 0.43)}
+/*********grid************/
+.ag-fresh .ag-body{
+    background: none !important;
+}
+.ag-fresh .ag-root{
+    border: none !important;
+}
+.ag-fresh .ag-header {
+    background: none !important;
+    border: none !important;
+    }
+    .ag-fresh .ag-header-cell-menu-button{
+        opacity: 1 !important;
+    }
+    .ag-header-cell,.ag-cell{
+        width: 33.3% !important;
+        position: static !important;
+        text-align: left !important;
+        padding-left: 10% !important;
+    }
+    .ag-header-row,.ag-row,.ag-body-container{
+        width: 100% !important;
+    }
+.ag-header-container{
+   background: dimgrey;
+}    
