@@ -1,0 +1,29 @@
+//anchor tag link color
+$link-color:        #058EC3;
+$link-color-hover:  darken($link-color, 3%);
+
+//primary button color specs
+$btn-primary-color:         #018AC1;
+$btn-primary-color-hover:   darken($btn-primary-color, 3%) ;
+$btn-primary-text:          #ffffff;
+
+/*Base text color */
+$base-text-color: #333333;
+$label-text-color: #6E7377;
+
+// input box text color
+$base-input-color:#6E7377;
+
+/*black text*/
+$black-text:#121616;
+
+/* heading color*/
+$heading-color: #058EC3;
+
+/* tab header background color*/
+$tab-background-color: #C5EAF0;
+$tab-selected-background: #018AC1;
+
+/*Body*/
+$body-bg-color:   #E8EBEF;
+$body-text-color: #0E365E;

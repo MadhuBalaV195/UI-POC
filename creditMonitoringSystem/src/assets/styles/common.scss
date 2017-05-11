@@ -1,0 +1,135 @@
+/*media queries*/
+
+$smartphones: "only screen and (max-width: 767px)";
+$x-large-desktop: "only screen and (min-width: 1200px) and (max-width: 1407px)";
+$large-desktop: "only screen and (min-width: 1024px) and (max-width: 1199px)";
+$desktop: "only screen and (min-width: 800px) and (max-width: 1023px)";
+$tablet: "only screen and (min-width: 768px) and (max-width: 799px)";
+$small-tablet: "only screen and (min-width: 600px) and (max-width: 767px)";
+$large-mobile: "only screen and (min-width: 480px) and (max-width: 599px)";
+$mobile: "only screen and (min-width: 319px) and (max-width: 479px)";
+/* sample media query
+
+    @media #{$smartphones}, #{$tablet} {
+        font-size: 18px;
+    }
+
+*/
+/*custom mixin*/
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin animate($duration) {
+    -webkit-transition: all $duration;
+    -moz-transition: all $duration;
+    -o-transition: all $duration;
+    transition: all $duration;
+}
+
+@mixin transform($value) {
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -o-transform: $value;
+    -ms-transform: $value;
+    transform: $value;
+}
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+/* sample usage of mixins
+
+    @include margin(10px,10px,10px,10px);
+
+    @include input-placeholder {
+        color: $grey;
+    }
+
+*/
+
+.primary-button{
+  @include padding(7px,16px,7px,16px);
+  font-size: 17px;
+  font-weight: normal;
+  @include rounded(4px);
+  border:0;
+  min-width: 100px;
+  background: $btn-primary-color;
+  color: $btn-primary-text;  
+  @include box-shadow(5px 5px 5px #d9d9d9);
+  &:hover,&:active{
+    background: $btn-primary-color-hover;
+    color: $btn-primary-text;
+    outline: none;
+    @include box-shadow(2px 2px 2px #d9d9d9);
+  }
+  &:focus{
+      outline: none;
+  }
+}
+
+/*anchors*/
+
+ul {
+    li {
+        a {
+            text-decoration: none!important;
+            /* unvisited link */
+            &:link {
+                color: $link-color-hover;
+            }
+            /* visited link */
+            &:visited {
+                color: $link-color-hover;
+            }
+            /* mouse over link */
+            &:hover {
+                color: $link-color-hover;
+            }
+            /* selected link */
+            &:active {
+                color: $link-color;
+            }
+        }
+    }
+}
+
+a {
+    color: $link-color;
+    text-decoration: none!important;
+    &:hover {
+        color: $link-color-hover;
+    }
+}
