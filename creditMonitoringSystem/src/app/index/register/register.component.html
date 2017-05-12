@@ -1,0 +1,29 @@
+<div class="form-wrapper text-center">
+  <h1>New User Registration</h1>
+  <form role="form" class="register-form" #r="ngForm">
+    <div class="form-group">
+      <label class="sr-only" for="form-username">Employee ID</label>
+      <input name="empID" #username placeholder="Employee ID" class="form-control" [(ngModel)]="user.empID" id="empID" type="text">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="form-username">Employee Name</label>
+      <input name="empName" #username placeholder="Employee Name" class="form-control" [(ngModel)]="user.empName" id="empName" type="text">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="form-username">Username</label>
+      <input name="username" #username placeholder="Username" class="form-control" [(ngModel)]="user.username" id="username" type="text">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="form-password">Password</label>
+      <input name="password1" #password placeholder="Password" class="form-control" [(ngModel)]="user.password1" id="password1" type="password">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="form-password">Confirm Password</label>
+      <input name="password2" #password placeholder="Confirm Password" class="form-control" [(ngModel)]="user.password2" id="password2" type="password">
+    </div>
+    <div *ngIf="!match">
+      <span class="errorMsg">Passowrds Didn't match</span>
+    </div>
+    <button type="button" (click)="register(r)" class="btn btn-block primary-button register-btn">Register</button>
+  </form>  
+</div>
