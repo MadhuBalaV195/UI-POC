@@ -1,8 +1,26 @@
 <section class="control-panel">
-    <div class="header text-center">
+  <div class="header text-center">
       <a> <img src="../assets/images/logo_innerpage.png"></a>
       <a class="pull-right logout-wrapper"><span class="logout"></span></a>
     </div>
-
+    
+    
+        <div class="col-lg-12 controlPanel-content">
+            <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                 <a [routerLink]="['/tabs']" class="link viewProfile control-links"><img src='./assets/images/view_profile.png'></a>
+                 <label class="customLabel">View Profile</label>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                 <a [routerLink]="['/tabs']" class="link updateProfile control-links"><img src='./assets/images/update_profile.png'></a>
+                 <label class="customLabel">update-profile</label>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                 <a [routerLink]="['/tabs']" class="link viewAll control-links"><img src='./assets/images/view_all.png'></a>
+                 <label  class="customLabel">View All</label>
+            </div>
+        </div>
+        </div>
     <router-outlet></router-outlet>
+
 </section>
