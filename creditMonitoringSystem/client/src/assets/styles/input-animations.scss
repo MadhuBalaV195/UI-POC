@@ -12,12 +12,7 @@
     }
     /* LABEL ======================================= */
     
-    /* active state */
-    input:focus~label, input:valid~label {
-        top: -20px;
-        font-size: 14px;
-        color: $heading-color;
-    }
+   
     label {
         color: $base-input-color;
         font-size: 17px;
@@ -29,6 +24,13 @@
         transition: 0.2s ease all;
         -moz-transition: 0.2s ease all;
         -webkit-transition: 0.2s ease all;
+    }
+
+     /* active state */
+    input:focus~label {
+        top: -20px;
+        font-size: 14px;
+        color: $heading-color;
     }
     /* BOTTOM BARS ================================= */
     .bar {

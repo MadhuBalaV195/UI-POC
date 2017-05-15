@@ -2,18 +2,18 @@
   <h1>Sign in to your account</h1>
   <form role="form" class="login-form" #f="ngForm">
     <div class="form-group group">
-      <label class="sr-only" for="form-username">Username</label>
-      <input name="username" #username placeholder="Username" class="form-control" [(ngModel)]="user.username" id="username" type="text">
-      <!--<span class="highlight"></span>
+     
+      <input name="username" #username class="form-control" [(ngModel)]="user.username" id="username" type="text">
+      <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Username</label>-->
+      <label>Username</label>
     </div>
     <div class="form-group group">
-      <label class="sr-only" for="form-password">Password</label>
-      <input name="password" #password placeholder="Password" class="form-control" [(ngModel)]="user.password" id="password" type="password">
-      <!--<span class="highlight"></span>
+      
+      <input name="password" #password class="form-control" [(ngModel)]="user.password" id="password" type="password">
+      <span class="highlight"></span>
       <span class="bar"></span>
-      <label>Password</label>-->
+      <label>Password</label>
     </div>
     <div *ngIf="!correct">
       <span class="errorMsg">Username/Password Incorrect</span>
