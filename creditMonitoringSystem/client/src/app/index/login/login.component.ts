@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { DataServeService, User } from '../../services/data-serve.service';
+// import { DataServeService, User } from '../../services/data-serve.service';
 
 @Component({
   selector: 'cms-login',
@@ -10,15 +10,15 @@ import { DataServeService, User } from '../../services/data-serve.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private service: DataServeService) { }
+  // constructor(private router: Router, private service: DataServeService) { }
   private correct: boolean;
   ngOnInit() {
     this.correct = true;
   }
-  public user = new User('', '');
+  /*public user = new User('', '');
   login(form: NgForm) {
     if (!this.service.login(this.user)) {
       this.correct = false;
     }
-  }
+  }*/
 }
