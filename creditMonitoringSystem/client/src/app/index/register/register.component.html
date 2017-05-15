@@ -1,0 +1,23 @@
+<div class="form-wrapper text-center">
+  <h1>New User Registration</h1>
+  <form role="form" class="register-form" (ngSubmit)="r.form.valid && register()" #r="ngForm">
+    <div class="form-group">
+      <label class="sr-only" for="form-username">Employee ID</label>
+      <input name="empID" #username placeholder="Employee ID" class="form-control" [(ngModel)]="model.empID" id="empID" type="text">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="form-username">Employee Name</label>
+      <input name="empName" #username placeholder="Employee Name" class="form-control" [(ngModel)]="model.empName" id="empName" type="text">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="form-username">Username</label>
+      <input name="username" #username placeholder="Username" class="form-control" [(ngModel)]="model.username" id="username" type="text">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="form-password">Password</label>
+      <input name="password" #password placeholder="Password" class="form-control" [(ngModel)]="model.password" id="password" type="password">
+    </div>
+    <button type="button" class="btn btn-block primary-button register-btn">Register</button>
+    <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+  </form>  
+</div>
