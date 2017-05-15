@@ -76,31 +76,24 @@ function getById(_id) {
 
 function create(userParam) {
     var deferred = Q.defer();
+    var json = require('data.json');
+    
+    //check whether username already taken
+    var hasUser = json.some(function (obj) {
+        return obj.username === userParam.username;
+    });
 
-    // validation
-            if (user) {
-                // username already exists
-                deferred.reject('Username "' + userParam.username + '" is already taken');
-            } else {
-                createUser();
-            }
-
-    function createUser() {
-        // set user object to userParam without the cleartext password
-        var user = _.omit(userParam, 'password');
-
-        // add hashed password to user object
-        user.hash = bcrypt.hashSync(userParam.password, 10);
-
-        // db.users.insert(
-        //     user,
-        //     function (err, doc) {
-        //         if (err) deferred.reject(err.name + ': ' + err.message);
-
-        //         deferred.resolve();
-        //     });
+    if (hasUser) {
+        deferred.reject('Username "' + userParam.username + '" is already taken');
+    } else {
+        json.push({
+            empID: userParam.empID,
+            empName: userParam.empName,
+            username: userParam.username,
+            password: userParam.password
+        });
+        deferred.resolve();
     }
-
     return deferred.promise;
 }
 

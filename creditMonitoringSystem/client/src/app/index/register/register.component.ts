@@ -22,6 +22,8 @@ export class RegisterComponent {
                 data => {
                     this.router.navigate(['/login']);
                 });
+                console.log('registered.');
+                console.log(this.model);
     }
 
 }
