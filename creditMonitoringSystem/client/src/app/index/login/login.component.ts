@@ -15,10 +15,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.correct = true;
   }
+
   /*public user = new User('', '');
   login(form: NgForm) {
     if (!this.service.login(this.user)) {
       this.correct = false;
     }
   }*/
+
 }

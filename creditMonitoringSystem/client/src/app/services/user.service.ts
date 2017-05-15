@@ -17,11 +17,11 @@ export class UserService {
     }
 
     create(user: User) {
-        return this.http.post(this.config.apiUrl + '/users/register', user, this.jwt());
+        return this.http.post(this.config.apiUrl + '/register', user, this.jwt());
     }
 
     update(user: User) {
-        return this.http.put(this.config.apiUrl + '/users/' + user.empID, user, this.jwt());
+        return this.http.put(this.config.apiUrl + '/users/' + user.empID, user);
     }
 
     delete(_id: string) {
