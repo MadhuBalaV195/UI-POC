@@ -48,6 +48,7 @@
             content:'Logout';
             position: absolute;
             top:70px;
+            right:60px;
             @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
               top:60px;
             }
