@@ -5,7 +5,7 @@ import { RegisterComponent } from './index/register/register.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
-const appRoute: Routes = [
+const appRoute: Routes = [    
     {
         path: '', component: IndexComponent,
         children: [
@@ -14,12 +14,12 @@ const appRoute: Routes = [
             { path: 'register', component: RegisterComponent }
         ]
     },
-     { path: 'control-panel', component: ControlPanelComponent,
-        children: [
-            {path: '', redirectTo: 'view-profile', pathMatch: 'full'},
-            { path: 'update-profile', component: UpdateProfileComponent },
-        ]
-     },
+    {
+        path: 'control-panel', component: ControlPanelComponent
+    },
+    // otherwise redirect to home
+    { path: '**', redirectTo: '' },
+
 
 ];
 

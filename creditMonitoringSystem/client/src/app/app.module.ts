@@ -18,7 +18,6 @@ import { TrainingsTakenComponent } from './trainings-taken/trainings-taken.compo
 import { AwardsComponent } from './awards/awards.component';
 import { AuthenticationService, UserService } from './services/index';
 import { AppConfig } from './app.config';
-import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [

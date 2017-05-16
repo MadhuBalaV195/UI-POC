@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
-// import { DataServeService, User } from '../../services/data-serve.service';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'cms-login',
@@ -9,18 +9,32 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  model: any = {};
+  loading = false;
+  returnUrl: string;
+  isCorrect = true;
+  errorMsg: string;
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private authenticationService: AuthenticationService) { }
 
-  // constructor(private router: Router, private service: DataServeService) { }
-  private correct: boolean;
   ngOnInit() {
-    this.correct = true;
+    // reset login status
+    this.authenticationService.logout();
   }
 
-  /*public user = new User('', '');
-  login(form: NgForm) {
-    if (!this.service.login(this.user)) {
-      this.correct = false;
-    }
-  }*/
+  login() {
+    this.authenticationService.login(this.model.username, this.model.password)
+      .subscribe(
+      data => {
+        console.log('login successfull');
+        this.router.navigate(['/control-panel']);
+      },
+      error => {
+        this.isCorrect = false;
+        this.errorMsg = error._body;
+      });
+  }
 
 }

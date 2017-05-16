@@ -21,9 +21,12 @@ export class RegisterComponent {
             .subscribe(
                 data => {
                     this.router.navigate(['/login']);
+                },
+                error => {
+                    alert(error._body);
+                    return false;
                 });
                 console.log('registered.');
-                console.log(this.model);
     }
 
 }

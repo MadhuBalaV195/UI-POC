@@ -1,22 +1,14 @@
 <div class="form-wrapper text-center">
   <h1>Sign in to your account</h1>
   <form role="form" class="login-form" #f="ngForm">
-    <div class="form-group group">
-  
-      <input name="username" #username class="form-control" [(ngModel)]="user.username" id="username" type="text">
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Username</label>
+    <div class="form-group group">  
+      <input name="username" placeholder="username" class="form-control" [(ngModel)]="model.username" id="username" type="text">
     </div>
-    <div class="form-group group">
-      
-      <input name="password" #password class="form-control" [(ngModel)]="user.password" id="password" type="password">
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <label>Password</label>
+    <div class="form-group group">      
+      <input name="password" placeholder="password" class="form-control" [(ngModel)]="model.password" id="password" type="password">
     </div>
     <div *ngIf="!correct">
-      <span class="errorMsg">Username/Password Incorrect</span>
+      <span class="errorMsg">{{errorMsg}}</span>
     </div>
     <button type="button" (click)="login(f)" class="btn btn-block primary-button login-btn">Sign In</button>
   </form>
