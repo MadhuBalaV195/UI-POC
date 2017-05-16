@@ -10,5 +10,11 @@
     "empID": "P0126",
     "empName": "Madhu Bala V",
     "hash": "$2a$10$BWhWw68Rn2d6V8zC3fvlv.RMqKJLKAEMACSOvvi9RS6a1yUvG4s3W"
+  },
+  {
+    "empID": "P0125",
+    "empName": "Prakhathi M",
+    "username": "prakhathi.m",
+    "hash": "$2a$10$3B/OH/MQ0kvnVPEzCWtOZu.ABatOTxRGG09VXLW0TMUoD8onYkqqm"
   }
 ]
