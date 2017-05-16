@@ -21,7 +21,10 @@
 }
 
 .header{
-    padding: 5px;
+    padding: 25px 5px;
+     @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
+       padding: 5px;
+     }
    a{
       color:$white-text;
       img{
@@ -41,9 +44,9 @@
         &:after{
             content:'Logout';
             position: absolute;
-            top:50px;
+            top:70px;
             right:60px;
-            @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}{
+            @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
               top:60px;
             }
          }
