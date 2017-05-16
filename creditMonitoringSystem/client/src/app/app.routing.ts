@@ -14,9 +14,12 @@ const appRoute: Routes = [
             { path: 'register', component: RegisterComponent }
         ]
     },
-    {
-        path: 'control-panel', component: ControlPanelComponent
-    },
+     { path: 'control-panel', component: ControlPanelComponent,
+        children: [
+            {path: '', redirectTo: 'view-profile', pathMatch: 'full'},
+            { path: 'update-profile', component: UpdateProfileComponent },
+        ]
+     },
     // otherwise redirect to home
     { path: '**', redirectTo: '' },
 
