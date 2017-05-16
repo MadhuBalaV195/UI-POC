@@ -2,11 +2,13 @@
     background: url('./assets/images/sec-background.png') no-repeat;
     background-size: cover;
     height: 100%;
-    .controlPanel-content{
+  .controlPanel-content{
           position: relative;
-          top:30%;
+          top:25%;
           text-align: center;
           float: none;
+          width: 70%;
+          margin: 0 auto;
         .control-links{
               display: inline-block;
               padding: 30px;
@@ -21,7 +23,11 @@
 }
 
 .header{
-    padding: 5px;
+
+    padding: 25px 5px;
+     @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
+       padding: 5px;
+     }
    a{
       color:$white-text;
       img{
@@ -41,9 +47,9 @@
         &:after{
             content:'Logout';
             position: absolute;
-            top:50px;
+            top:70px;
             right:60px;
-            @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}{
+            @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
               top:60px;
             }
          }
