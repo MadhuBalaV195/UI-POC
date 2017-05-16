@@ -1,62 +1,85 @@
-.control-panel{
+.control-panel {
     background: url('./assets/images/sec-background.png') no-repeat;
     background-size: cover;
     height: 100%;
-  .controlPanel-content{
-          position: relative;
-          top:25%;
-          text-align: center;
-          float: none;
-          width: 70%;
-          margin: 0 auto;
-        .control-links{
-              display: inline-block;
-              padding: 30px;
-              background: #fff;
-              border-radius: 5px;
-                }
-          }
+    h1{
+      color: $body-text-color;
+      font-family: Montserrat-Regular;
+      span{
+        font-family: Montserrat-Light;
+      }
+    }
+    .controlPanel-content {
+        position: relative;
+        top: 25%;
+        text-align: center;
+        float: none;
+        width: 70%;
+        margin: 0 auto;
+        .control-links {
+            display: inline-block;
+            padding: 30px;
+            background: #fff;
+            border-radius: 5px;
+        }
+    }
 }
 
-.customLabel{
+.customLabel {
     display: block;
 }
 
-.header{
-
+.header {
     padding: 25px 5px;
-     @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
-       padding: 5px;
-     }
-   a{
-      color:$white-text;
-      img{
-          height:70px;
-           @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
-               height:auto;
-           }
-      }
-      &.logout-wrapper{
-        width:50px;
-        @include margin(10px, 60px, 20px, 0);
-      .logout{
-        display: inline-block;
-        height:40px;
-        width: 40px;
-        background: url('./assets/images/logout.png') no-repeat;
-        &:after{
-            content:'Logout';
-            position: absolute;
-            top:70px;
-            right:60px;
-            @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
-              top:60px;
-            }
-         }
-      }
-      @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}{
-        @include margin(25px,60px,20px,0);
-      }
+    @media #{$large-desktop},
+    #{$desktop},
+    #{$x-large-desktop},
+    #{$smartphones} {
+        padding: 5px;
     }
-  }
+    a {
+        color: $white-text;
+        img {
+            height: 70px;
+            @media #{$large-desktop},
+            #{$desktop},
+            #{$x-large-desktop},
+            #{$smartphones} {
+                height: auto;
+            }
+        }
+        &.logout-wrapper {
+            width: 50px;
+            @include margin(10px,
+            60px,
+            20px,
+            0);
+            .logout {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background: url('./assets/images/logout.png') no-repeat;
+                &:after {
+                    content: 'Logout';
+                    position: absolute;
+                    top: 70px;
+                    right: 60px;
+                    @media #{$large-desktop},
+                    #{$desktop},
+                    #{$x-large-desktop},
+                    #{$smartphones} {
+                        top: 60px;
+                    }
+                }
+            }
+            @media #{$large-desktop},
+            #{$desktop},
+            #{$x-large-desktop} {
+                @include margin(25px,
+                60px,
+                20px,
+                0);
+            }
+        }
+    }
 }
