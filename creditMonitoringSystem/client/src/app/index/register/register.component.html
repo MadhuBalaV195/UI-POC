@@ -1,21 +1,29 @@
 <div class="form-wrapper text-center">
   <h1>New User Registration</h1>
   <form role="form" class="register-form" (ngSubmit)="r.form.valid && register()" #r="ngForm">
-    <div class="form-group">
-      <label class="sr-only" for="form-username">Employee ID</label>
-      <input name="empID" #username placeholder="Employee ID" class="form-control" [(ngModel)]="model.empID" id="empID" type="text">
+    <div class="form-group group">
+      <input name="empID" #username required="" class="form-control" [(ngModel)]="model.empID" id="empID" type="text">
+      <label  for="form-username">Employee ID</label>
+      <span class="bar"></span>
+      <span class="hightlight"></span>
     </div>
-    <div class="form-group">
-      <label class="sr-only" for="form-username">Employee Name</label>
-      <input name="empName" #username placeholder="Employee Name" class="form-control" [(ngModel)]="model.empName" id="empName" type="text">
+    <div class="form-group group">
+      <input name="empName" #username required="" class="form-control" [(ngModel)]="model.empName" id="empName" type="text">
+      <label  for="form-username">Employee Name</label>
+      <span class="bar"></span>
+      <span class="hightlight"></span>
     </div>
-    <div class="form-group">
-      <label class="sr-only" for="form-username">Username</label>
-      <input name="username" #username placeholder="Username" class="form-control" [(ngModel)]="model.username" id="username" type="text">
+    <div class="form-group group">
+      <input name="username" #username required="" class="form-control" [(ngModel)]="model.username" id="username" type="text">
+      <label  for="form-username">Username</label>
+      <span class="bar"></span>
+      <span class="hightlight"></span>
     </div>
-    <div class="form-group">
-      <label class="sr-only" for="form-password">Password</label>
-      <input name="password" #password placeholder="Password" class="form-control" [(ngModel)]="model.password" id="password" type="password">
+    <div class="form-group group">
+      <input name="password" #password required="" class="form-control" [(ngModel)]="model.password" id="password" type="password">
+      <label  for="form-password">Password</label>
+      <span class="bar"></span>
+      <span class="hightlight"></span>
     </div>
     <button type="submit" class="btn btn-block primary-button register-btn">Register</button>
     <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>

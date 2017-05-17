@@ -27,8 +27,8 @@
     }
 
      /* active state */
-    input:focus~label {
-        top: -20px;
+    input:focus~label , input:valid~label{
+        top: -25px;
         font-size: 14px;
         color: $heading-color;
     }
