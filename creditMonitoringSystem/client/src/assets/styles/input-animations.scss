@@ -30,7 +30,7 @@
     input:focus~label , input:valid~label{
         top: -25px;
         font-size: 14px;
-        color: $heading-color;
+        color: $label-text-color;
     }
     /* BOTTOM BARS ================================= */
     .bar {
