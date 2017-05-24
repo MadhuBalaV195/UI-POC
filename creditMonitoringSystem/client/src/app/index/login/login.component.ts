@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
       data => {
         console.log('login successfull');
-        this.router.navigate(['/control-panel']);
+        this.router.navigate(['/user-dashboard']);
       },
       error => {
         this.isCorrect = false;

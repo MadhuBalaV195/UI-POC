@@ -9,12 +9,7 @@ import { UserService } from '../services/index';
   styleUrls: ['./control-panel.component.scss']
 })
 export class ControlPanelComponent implements OnInit {
-    currentUser: User;
-    users: User[] = [];
-
-    constructor(private userService: UserService) {
-        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    }
+    
 
   ngOnInit() {
   }
