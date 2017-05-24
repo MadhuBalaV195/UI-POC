@@ -18,6 +18,7 @@ import { TrainingsTakenComponent } from './trainings-taken/trainings-taken.compo
 import { AwardsComponent } from './awards/awards.component';
 import { AuthenticationService, UserService } from './services/index';
 import { AppConfig } from './app.config';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AppConfig } from './app.config';
     PocDetailsComponent,
     TrainingsAttendedComponent,
     TrainingsTakenComponent,
-    AwardsComponent
+    AwardsComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,
