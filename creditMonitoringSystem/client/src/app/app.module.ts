@@ -13,9 +13,9 @@ import { TabComponent } from './tab/tab.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { qualityofdeliverablesComponent } from './quality-of-deliverables/quality-of-deliverables.component';
-import { TrainingsAttendedComponent } from './trainings-attended/trainings-attended.component';
-import { TrainingsTakenComponent } from './trainings-taken/trainings-taken.component';
-import { AwardsComponent } from './awards/awards.component';
+import { SelfDevelopmentComponent } from './self-development/self-development.component';
+import { OrgDevComponent } from './org-dev/org-dev.component';
+import { PeopleManagement } from './people-management/people-management.component';
 import { AuthenticationService, UserService } from './services/index';
 import { AppConfig } from './app.config';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
@@ -31,9 +31,9 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     TabsComponent,
     UpdateProfileComponent,
     qualityofdeliverablesComponent,
-    TrainingsAttendedComponent,
-    TrainingsTakenComponent,
-    AwardsComponent,
+    SelfDevelopmentComponent,
+    OrgDevComponent,
+    PeopleManagement,
     UserDashboardComponent
   ],
   imports: [
