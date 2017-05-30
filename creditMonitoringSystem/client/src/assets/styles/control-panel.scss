@@ -1,0 +1,41 @@
+.control-panel{
+    background: url('./assets/images/sec-background.png');
+    background-repeat:  no-repeat;
+    background-position:  center ;
+    background-size: cover;
+    height: 100%;
+}
+.header{
+    padding: 5px;
+   a{
+      color:$white-text;
+      img{
+          height:70px;
+           @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
+               height:auto;
+           }
+      }
+      &.logout-wrapper{
+        width:50px;
+        @include margin(10px, 60px, 20px, 0);
+      .logout{
+        display: inline-block;
+        height:40px;
+        width: 40px;
+        background: url('./assets/images/logout.png') no-repeat;
+        &:after{
+            content:'Logout';
+            position: absolute;
+            top:50px;
+            right:60px;
+            @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}{
+              top:60px;
+            }
+         }
+      }
+      @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}{
+        @include margin(25px,60px,20px,0);
+      }
+    }
+  }
+}
