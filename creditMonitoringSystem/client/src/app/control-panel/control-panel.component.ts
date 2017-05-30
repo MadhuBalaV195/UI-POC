@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { User } from '../model';
+import { UserService } from '../services/index';
 
 @Component({
   selector: 'cms-control-panel',
@@ -6,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./control-panel.component.scss']
 })
 export class ControlPanelComponent implements OnInit {
-
-  constructor() { }
+    
 
   ngOnInit() {
   }

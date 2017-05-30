@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { PocDetailsComponent } from './poc-details.component';
+import { qualityofdeliverablesComponent } from './quality-of-deliverables.component';
 
-describe('PocDetailsComponent', () => {
-  let component: PocDetailsComponent;
-  let fixture: ComponentFixture<PocDetailsComponent>;
+describe('qualityofdeliverablesComponent', () => {
+  let component: qualityofdeliverablesComponent;
+  let fixture: ComponentFixture<qualityofdeliverablesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PocDetailsComponent ]
+      declarations: [ qualityofdeliverablesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PocDetailsComponent);
+    fixture = TestBed.createComponent(qualityofdeliverablesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
