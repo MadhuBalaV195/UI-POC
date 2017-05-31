@@ -1,0 +1,26 @@
+[
+  {
+    "empID": "P0168",
+    "empName": "Dhinesh S",
+    "username": "dhinesh",
+    "hash": "$2a$10$t6/WLiYzFBQleVgtmf43d.F/bSJaRSeN8G0C18It8XSSEWifeN7Iy"
+  },
+  {
+    "username": "Madhu",
+    "empID": "P0126",
+    "empName": "Madhu Bala V",
+    "hash": "$2a$10$BWhWw68Rn2d6V8zC3fvlv.RMqKJLKAEMACSOvvi9RS6a1yUvG4s3W"
+  },
+  {
+    "empID": "P0125",
+    "empName": "Prakhathi M",
+    "username": "prakhathi.m",
+    "hash": "$2a$10$3B/OH/MQ0kvnVPEzCWtOZu.ABatOTxRGG09VXLW0TMUoD8onYkqqm"
+  },
+  {
+    "empID": "P0127",
+    "empName": "Indumathi P",
+    "username": "Indumathi",
+    "hash": "$2a$10$gES3eCFnJGfFgUI7Co08su5l6jJ.Np47K6.9/qgdcgZAmZ2ajnTGy"
+  }
+]
