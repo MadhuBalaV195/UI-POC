@@ -3,6 +3,9 @@ var _ = require('lodash');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 var Q = require('q');
+var mongo = require('mongoskin');
+var db = mongo.db(config.connectionString, { native_parser: true });
+db.bind('users');
 
 var service = {};
 
@@ -14,28 +17,18 @@ module.exports = service;
 function authenticate(username, password) {
     var deferred = Q.defer();
 
-    var fs = require('fs'), isFailed=false;
-
-    fs.readFile('./data.json', 'utf-8', function (err, data) {
+    db.users.findOne({ username: username }, function (err, user) {
         if (err) deferred.reject(err.name + ': ' + err.message);
-        var dataArray = JSON.parse(data);
 
-        for (var i = 0; i < dataArray.length; i++) {
-            if (dataArray[i].username==username && bcrypt.compareSync(password, dataArray[i].hash)) {
-                // authentication successful
-                deferred.resolve({
-                    empID: dataArray[i].empID,
-                    empName: dataArray[i].empName,
-                    token: jwt.sign({ sub: dataArray[i].empID }, config.secret)
-                });
-                isFailed=false;
-                break;
-            } else {
-                // authentication failed
-                isFailed=true;
-            }
-        }
-        if(isFailed){
+        if (user && bcrypt.compareSync(password, user.hash)) {
+            // authentication successful
+            deferred.resolve({
+                empID: user.empID,
+                empName: user.empName,
+                token: jwt.sign({ sub: user.empID }, config.secret)
+            });
+        } else {
+            // authentication failed
             deferred.resolve();
         }
     });
@@ -45,40 +38,48 @@ function authenticate(username, password) {
 
 function create(userParam) {
     var deferred = Q.defer();
-    var fs = require('fs')
 
-    fs.readFile('./data.json', 'utf-8', function (err, data) {
-        if (err) throw err
+    // validation
+    db.users.findOne(
+        { empID: userParam.empID },
+        function (err, user) {
+            if (err) deferred.reject(err.name + ': ' + err.message);
 
-        var hasID = false,
-            hasUsername = false,
-            arrayOfObjects = JSON.parse(data);
-
-        for (var i = 0; i < arrayOfObjects.length; i++) {
-            if (arrayOfObjects[i].empID == userParam.empID) {
-                hasID = true;
-                break;
-            } else if (arrayOfObjects[i].username == userParam.username) {
-                hasUsername = true;
-                break;
+            if (user) {
+                // Employee ID already exists
+                deferred.reject('Employee ID "' + userParam.empID + '" is already registered');
+            } else {
+                checkUsername();
             }
-        }
-        if (hasUsername) {
-            console.log('username already taken');
-            deferred.reject('Username "' + userParam.username + '" is already taken. Please choose another');
-        } else if (hasID) {
-            console.log('Employee ID already registered');
-            deferred.reject('Employee ID "' + userParam.empID + '" is already registered');
-        } else {
-            var user = _.omit(userParam, 'password');
-            user.hash = bcrypt.hashSync(userParam.password, 10);
-            arrayOfObjects.push(user)
-            fs.writeFile('./data.json', JSON.stringify(arrayOfObjects, null, 2), 'utf-8', function (err) {
-                if (err) throw err
-                console.log('Employee details registered.')
-            })
-        }
-        deferred.resolve();
-    })
+        });
+    function checkUsername() {
+        db.users.findOne(
+            { username: userParam.username },
+            function (err, user) {
+                if (err) deferred.reject(err.name + ': ' + err.message);
+
+                if (user) {
+                    // Employee ID already exists
+                    deferred.reject('Username "' + userParam.username + '" is already taken');
+                } else {
+                    createUser();
+                }
+            });
+    }
+    function createUser() {
+        // set user object to userParam without the cleartext password
+        var user = _.omit(userParam, 'password');
+
+        // add hashed password to user object
+        user.hash = bcrypt.hashSync(userParam.password, 10);
+
+        db.users.insert(
+            user,
+            function (err, doc) {
+                if (err) deferred.reject(err.name + ': ' + err.message);
+
+                deferred.resolve();
+            });
+    }
     return deferred.promise;
 }
