@@ -6,7 +6,7 @@ import { Component, OnInit , Input } from '@angular/core';
   styleUrls: ['./tab.component.scss']
 })
 export class TabComponent implements OnInit {
-@Input() title = '';
+@Input() name = '';
   @Input() active = false;
   @Input() disabled = false;
   constructor() { }
