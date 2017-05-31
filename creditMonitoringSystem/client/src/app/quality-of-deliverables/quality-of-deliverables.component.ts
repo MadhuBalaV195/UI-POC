@@ -10,6 +10,7 @@ export class qualityofdeliverablesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+ 
   }
-
+  
 }
