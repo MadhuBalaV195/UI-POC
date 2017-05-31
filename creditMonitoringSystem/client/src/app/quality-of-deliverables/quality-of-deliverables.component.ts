@@ -17,7 +17,7 @@ export class qualityofdeliverablesComponent implements OnInit {
 
     let dynamicScript = document.createElement('script');
     dynamicScript.text = script;
-
+    this.elementRef.nativeElement.appendChild(dynamicScript);
   }
 }
 
