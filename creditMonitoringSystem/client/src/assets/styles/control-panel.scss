@@ -1,41 +1,136 @@
-.control-panel{
-    background: url('./assets/images/sec-background.png');
-    background-repeat:  no-repeat;
-    background-position:  center ;
+.control-panel {
+    background: url('./assets/images/sec-background.png') no-repeat;
     background-size: cover;
     height: 100%;
-}
-.header{
-    padding: 5px;
-   a{
-      color:$white-text;
-      img{
-          height:70px;
-           @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}, #{$smartphones}{
-               height:auto;
-           }
-      }
-      &.logout-wrapper{
-        width:50px;
-        @include margin(10px, 60px, 20px, 0);
-      .logout{
-        display: inline-block;
-        height:40px;
-        width: 40px;
-        background: url('./assets/images/logout.png') no-repeat;
-        &:after{
-            content:'Logout';
-            position: absolute;
-            top:50px;
-            right:60px;
-            @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}{
-              top:60px;
-            }
-         }
-      }
-      @media #{$large-desktop}, #{$desktop}, #{$x-large-desktop}{
-        @include margin(25px,60px,20px,0);
+    h1{
+      color: $body-text-color;
+      font-family: Montserrat-Regular;
+      span{
+        font-family: Montserrat-Light;
       }
     }
+    .controlPanel-content {
+        position: relative;
+        top: 25%;
+        text-align: center;
+        float: none;
+        width: 70%;
+        margin: 0 auto;
+        .control-links {
+            display: inline-block;
+            padding: 30px;
+            background: #fff;
+            border-radius: 5px;
+        }
+    }
+}
+
+.customLabel {
+    display: block;
+}
+
+.header {
+    padding: 25px 5px;
+    @media #{$large-desktop},
+    #{$desktop},
+    #{$x-large-desktop},
+    #{$smartphones} {
+        padding: 5px;
+    }
+    a {
+        color: $white-text;
+        img {
+            height: 70px;
+            @media #{$large-desktop},
+            #{$desktop},
+            #{$x-large-desktop},
+            #{$smartphones} {
+                height: auto;
+            }
+        }
+        &.logout-wrapper {
+            width: 50px;
+            @include margin(10px,
+            60px,
+            20px,
+            0);
+            .logout {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background: url('./assets/images/logout.png') no-repeat;
+                &:after {
+                    content: 'Logout';
+                    position: absolute;
+                    top: 70px;
+                    right: 60px;
+                    @media #{$large-desktop},
+                    #{$desktop},
+                    #{$x-large-desktop},
+                    #{$smartphones} {
+                        top: 60px;
+                    }
+                }
+            }
+            @media #{$large-desktop},
+            #{$desktop},
+            #{$x-large-desktop} {
+                @include margin(25px,
+                60px,
+                20px,
+                0);
+            }
+        }
+    }
+}
+/**********************Update Profile*********/
+.padT30{
+    padding-top: 30px;
+}
+.update-profile{
+    h2{
+        color: $body-text-color;
+    }
+ .content-wrapper{
+    background: $white-text;
+    border-radius: 9px;
+    box-shadow: 8px 8px 16px $box-shadow;
+    position: relative;
+    bottom: 9px;
+ }
+.tab-container .row{
+    padding: 5%;
+    .form-group{
+        span.tooltip-icon{
+            display: inline-block;
+            vertical-align: sub;
+            margin:0 5px;
+            cursor: pointer;
+            height: 17px;
+            width: 17px;
+            background: url('./assets/images/tooltip.png');
+       }
+    }
+}
+.row.btn-container{
+    padding-top: 0;
+}
+ .nav.nav-tabs li{
+     width: 25%;
+     a{
+       padding: 15px 0 20px 0;
+       background: $tab-background-color;
+       color: $body-text-color;
+     }
   }
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    color: $white-text;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: $tab-selected-background;
+    border: 1px solid $tab-selected-background;
+ }
+.btn-primary{
+    padding: 10px 35px;
+}
 }
