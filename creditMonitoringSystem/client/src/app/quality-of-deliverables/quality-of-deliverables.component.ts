@@ -20,4 +20,3 @@ export class qualityofdeliverablesComponent implements OnInit {
     this.elementRef.nativeElement.appendChild(dynamicScript);
   }
 }
-
