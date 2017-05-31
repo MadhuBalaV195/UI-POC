@@ -4,6 +4,7 @@ import { LoginComponent } from './index/login/login.component';
 import { RegisterComponent } from './index/register/register.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 const appRoute: Routes = [    
     {
@@ -17,8 +18,9 @@ const appRoute: Routes = [
      { path: 'user-dashboard', component: UserDashboardComponent },
      { path: 'control-panel', component: ControlPanelComponent,
         children: [
-            {path: '', redirectTo: 'view-profile', pathMatch: 'full'},
+            // {path: '', redirectTo: 'view-profile', pathMatch: 'full'},
             { path: 'update-profile', component: UpdateProfileComponent },
+            { path: 'view-profile', component: ViewProfileComponent },
         ]
      },
     // otherwise redirect to home
