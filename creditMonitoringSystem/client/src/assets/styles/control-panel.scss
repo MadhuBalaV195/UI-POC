@@ -86,7 +86,9 @@
 
 
 /**********************Update Profile*********/
-
+.tab-container{
+    height: calc( 100vh - 35vh );
+}
 .padT30 {
     padding-top: 30px;
 }
@@ -103,7 +105,7 @@
         bottom: 9px;
     }
     .tab-container .row {
-        padding: 5%;
+        padding: 5% 3%;
         .form-group {
             span.tooltip-icon {
                 display: inline-block;
@@ -140,5 +142,17 @@
     }
     .btn-primary {
         padding: 10px 35px;
+    }
+}
+textarea {
+   resize: none;
+   &.mentor{
+       width: 65%;
+   }
+}
+.people-container{
+    .row.btn-container{
+        position: absolute;
+        bottom: 0;
     }
 }
