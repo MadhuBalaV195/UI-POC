@@ -1,10 +1,10 @@
 {
-  "name": "mean-angular2-registration-login-example-server",
+  "name": "Credit Monitoring System",
   "version": "1.0.0",
-  "description": "Server for MEAN Stack with Angular 2 User Registration and Login Example",
+  "description": "Server for Credit Monitoring System",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornflourblue/mean-angular2-registration-login-example.git"
+    "url": "https://github.com/MadhuBalaV195/UI-POC.git"
   },
   "dependencies": {
     "bcryptjs": "^2.1.0",
