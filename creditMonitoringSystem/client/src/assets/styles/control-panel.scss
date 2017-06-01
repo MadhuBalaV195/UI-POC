@@ -113,6 +113,8 @@
                 height: 17px;
                 width: 17px;
                 background: url('./assets/images/tooltip.png');
+                + .tooltip > .tooltip-inner {background-color: #C5EAF0;color:#0E365E}
+                + .tooltip .tooltip-arrow{border-right-color:#018AC1}
             }
         }
     }
